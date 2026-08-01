@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Edit Question</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-5">
+
+    <div class="card shadow p-4">
+
+        <h2 class="mb-4">
+            ✏️ Edit Question
+        </h2>
+
+        <form action="/admin/update"
+              method="post">
+
+            <input type="hidden"
+                   name="id"
+                   th:value="${question.id}">
+
+            <input type="text"
+                   name="questionText"
+                   th:value="${question.questionText}"
+                   class="form-control mb-2">
+
+            <input type="text"
+                   name="option1"
+                   th:value="${question.option1}"
+                   class="form-control mb-2">
+
+            <input type="text"
+                   name="option2"
+                   th:value="${question.option2}"
+                   class="form-control mb-2">
+
+            <input type="text"
+                   name="option3"
+                   th:value="${question.option3}"
+                   class="form-control mb-2">
+
+            <input type="text"
+                   name="option4"
+                   th:value="${question.option4}"
+                   class="form-control mb-2">
+
+            <input type="text"
+                   name="correctAnswer"
+                   th:value="${question.correctAnswer}"
+                   class="form-control mb-2">
+
+            <input type="text"
+                   name="category"
+                   th:value="${question.category}"
+                   class="form-control mb-3">
+
+            <button class="btn btn-success">
+                Update Question
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
